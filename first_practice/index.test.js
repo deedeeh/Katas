@@ -23,3 +23,7 @@ test('if 1996 return true', () => {
 test('if 2000 return true', () => {
   expect(index(2000)).toBe(true);
 });
+
+test('if year is divisable by 4 return true', () => {
+  expect(index(1996)).toBe(true);
+});
