@@ -35,3 +35,11 @@ test('when 1600 return true', () => {
 test('if year is divisible by 400 return true', () => {
   expect(index(1200)).toBe(true);
 });
+
+test('when 1800 return false', () => {
+  expect(index(1800)).toBe(false);
+});
+
+test('if year is divisible by 4 and 100 but not divisible by 400 return false', () => {
+  expect(index(1400)).toBe(false);
+})
