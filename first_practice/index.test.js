@@ -24,6 +24,14 @@ test('if 2000 return true', () => {
   expect(index(2000)).toBe(true);
 });
 
-test('if year is divisable by 4 return true', () => {
+test('if year is divisible by 4 return true', () => {
   expect(index(1996)).toBe(true);
+});
+
+test('when 1600 return true', () => {
+  expect(index(1600)).toBe(true);
+})
+
+test('if year is divisible by 400 return true', () => {
+  expect(index(1200)).toBe(true);
 });
