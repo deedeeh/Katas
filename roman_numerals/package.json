@@ -1,0 +1,14 @@
+{
+  "name": "roman_numerals",
+  "version": "1.0.0",
+  "description": "",
+  "main": "roman_numerals.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Dina Hafez",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^24.9.0"
+  }
+}
