@@ -1,0 +1,14 @@
+{
+  "name": "get_middle_chars",
+  "version": "1.0.0",
+  "description": "",
+  "main": "get_middle_chars.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dina Hafez",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^24.9.0"
+  }
+}
