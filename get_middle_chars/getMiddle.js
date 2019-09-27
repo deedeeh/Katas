@@ -1,12 +1,8 @@
 const getMiddle = (s) => {
-  const wordsLength = s.length;
-  const lengthDivisibleBy2 = Math.floor(wordsLength / 2);
-  const chars = s.split('');
-  if(wordsLength % 2 === 0) {
-    return chars.splice(lengthDivisibleBy2 - 1, 2).join('');
-  } else if(wordsLength % 2 !== 0) {
-    return chars.splice(lengthDivisibleBy2, 1).join('');
-  }
+  const middle = Math.floor(s.length / 2);
+  return s.length % 2 === 0
+    ? s.slice(middle - 1, middle + 1)
+    : s.charAt(middle)
 }
 
 module.exports = getMiddle;
