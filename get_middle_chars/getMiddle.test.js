@@ -27,3 +27,7 @@ test('if the word is alone return the middle character', () => {
 test('if the word is leisure return the middle character', () => {
   expect(getMiddle("leisure")).toBe("s");
 });
+
+test('if the word\'s length is odd return the middle character', () => {
+  expect(getMiddle("different")).toBe("e");
+});
