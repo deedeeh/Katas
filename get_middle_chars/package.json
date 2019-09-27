@@ -4,7 +4,7 @@
   "description": "",
   "main": "get_middle_chars.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "author": "Dina Hafez",
   "license": "ISC",
