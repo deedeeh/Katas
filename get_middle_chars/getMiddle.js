@@ -1,10 +1,9 @@
 const getMiddle = (s) => {
-  if(s === "test") {
-    return "es";
-  } else if(s === "middle") {
-    return "dd";
-  } else if(s === "career") {
-    return "re";
+  const wordsLength = s.length;
+  const lengthDivisibleBy2 = wordsLength / 2;
+  const chars = s.split('');
+  if(wordsLength % 2 === 0) {
+    return chars.splice(lengthDivisibleBy2 - 1, 2).join('');
   }
 }
 
