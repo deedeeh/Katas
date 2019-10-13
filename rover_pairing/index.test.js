@@ -131,6 +131,43 @@ test('rover\' direction is south and it turns right', () => {
   expect(rover(7, 4, "S", "R")).toBe("7:4:E")
 }); 
 
+test('rover\'s direction is east, it turns left then move 1 step', () => {
+  expect(rover(1, 1, "E", "LM")).toBe("1:2:N")
+});
+
+test('rover\'s direction is east, it turns left then move 2 steps', () => {
+  expect(rover(1, 1, "E", "LMM")).toBe("1:3:N")
+});
+
+test('rover\'s direction is east, it turns left then move 3 steps', () => {
+  expect(rover(6, 6, "E", "LMMM")).toBe("6:9:N")
+});
+
+test('rover\'s direction is west, it turns left then move 2 steps', () => {
+  expect(rover(6, 6, "W", "LMM")).toBe("6:8:N")
+});
+
+test('rover\'s direction is west, it turns left then move 6 steps', () => {
+  expect(rover(2, 2, "W", "LMMMMMM")).toBe("2:8:N")
+});
+
+test('rover\'s direction is west, it turns right then move 5 steps', () => {
+  expect(rover(2, 2, "W", "RMMMMM")).toBe("2:-3:S")
+});
+
+test('rover\'s direction is north, it turns left then move 3 steps', () => {
+  expect(rover(1, 1, "N", "LMMM")).toBe("-2:1:W")
+});
+
+test('rover\'s direction is north, it turns left then move 2 steps then turns right', () => {
+  expect(rover(3, 3, "N", "LMMR")).toBe("1:3:S")
+});
+
+test('rover\'s direction is east, it moves 2 steps, turns right, moves 1 step then left', () => {
+  expect(rover(5, 5, "E", "MMRML")).toBe("7:4:W")
+});
+
+
 
 
 
