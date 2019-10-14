@@ -1,0 +1,14 @@
+{
+  "name": "bank_account",
+  "version": "1.0.0",
+  "description": "",
+  "main": "account.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Dina",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^24.9.0"
+  }
+}
