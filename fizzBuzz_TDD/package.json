@@ -1,0 +1,14 @@
+{
+  "name": "fizzbuzz_tdd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "fizzBuzz.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Dina Hafez",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^24.9.0"
+  }
+}
