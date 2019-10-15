@@ -1,16 +1,19 @@
 const fizzBuzz = (num) => {
-  if(num === 15) {
-    return "FizzBuzz"
-  } else if(num === 30) {
-    return "FizzBuzz"
-  } else if(num === 45) {
-    return "FizzBuzz"
-  }
-  if(num % 5 === 0) {
-    return "Buzz"
-  } else if(num % 3 === 0) {
-    return "Fizz"
+  switch(true) {
+    case (num % 3 === 0 && num % 5 === 0):
+      return "FizzBuzz"
+      break;
+    case (num % 3 === 0):
+      return "Fizz" 
+      break;
+    case (num % 5 === 0):
+      return "Buzz"
+      break;
+    default: 
+      return "Sorry this number is not multiple of 3 or 5"
+      break;
   }
 }
+
 
 module.exports = fizzBuzz

@@ -44,3 +44,11 @@ test('number 45 should return "FizzBuzz"', () => {
   expect(fizzBuzz(45)).toBe("FizzBuzz")
 });
 
+test('if number is multiple of 3 and 5 return "FizzBuzz', () => {
+  expect(fizzBuzz(120)).toBe("FizzBuzz")
+});
+
+test('if number is not multiple of 3 or 5 throw error message', () => {
+  expect(fizzBuzz(176)).toBe("Sorry this number is not multiple of 3 or 5")
+});
+
