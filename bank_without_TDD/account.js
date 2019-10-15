@@ -9,7 +9,7 @@ class Account {
   addDeposit(deposit) {
     if(deposit >= 10) {
       const newBalance = this.balance + deposit
-      this.transactions.push({type: 'deposit', value: deposit, balance: newBalance})
+      this.transactions.push({date: this.date.toLocaleString(), type: 'deposit', value: deposit, balance: newBalance})
       this.balance = newBalance
       return
     } else {
@@ -20,7 +20,7 @@ class Account {
   withdrawMoney(withdraw) {
     if(withdraw <= this.balance) {
       const newBalance = this.balance - withdraw
-      this.transactions.push({type: 'withdraw', value: withdraw, balance: newBalance})
+      this.transactions.push({date: this.date.toLocaleString(), type: 'withdraw', value: withdraw, balance: newBalance})
       this.balance = newBalance
       return
     } else {
@@ -33,11 +33,11 @@ class Account {
   }
 
   generateStatement(){
-    return this.transactions.map(tx => `${this.date.toLocaleString()} ||        ${tx.type === 'withdraw' ? `-${tx.value}` : tx.value}      ||          ${tx.balance}\n`).join('')
+    return this.transactions.map(tx => `${tx.date} ||        ${tx.type === 'withdraw' ? `-${tx.value}` : tx.value}          ||          ${tx.balance}\n`).join('')
   }
 
   printStatement() {
-    return `      Date          ||      Amount      ||       Balance
+    return `      Date          ||      Amount          ||       Balance
 ${this.generateStatement()}
 `
   }
@@ -47,5 +47,5 @@ ${this.generateStatement()}
  const account01 = new Account('Sara')
  console.log(account01.addDeposit(60));
  console.log(account01.addDeposit(100));
- console.log(account01.withdrawMoney(120));
+ console.log(account01.withdrawMoney(100));
  console.log(account01.printStatement());
