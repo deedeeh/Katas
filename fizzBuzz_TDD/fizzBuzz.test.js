@@ -1,5 +1,13 @@
 const fizzBuzz = require('./fizzBuzz');
 
-test('testing', () => {
-  expect(fizzBuzz(2)).toBe(true)
+test('number 3 should return "Fizz"', () => {
+  expect(fizzBuzz(3)).toBe("Fizz")
+});
+
+test('number 6 should return "Fizz"', () => {
+  expect(fizzBuzz(6)).toBe("Fizz")
+});
+
+test('number 9 should return "Fizz"', () => {
+  expect(fizzBuzz(9)).toBe("Fizz")
 });
