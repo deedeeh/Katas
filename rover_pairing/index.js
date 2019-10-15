@@ -4,29 +4,30 @@ const rover = (x, y, direction, commands) => {
   let newYCoordinate = y; 
 
   commands.split('').map(command => {
-    if(command === "M") {
-      if(newDirection === "N") {
-        newYCoordinate += 1
-      } else if(newDirection === "E") {
-        newXCoordinate += 1
-      } else if(newDirection === "W") {
-        newXCoordinate -= 1
-      }  else if(newDirection === "S") {
-        newYCoordinate -= 1
-      }
-    } else if(command === "L") {
-      if(newDirection === "E" || newDirection === "W") {
-        newDirection = "N"
-      } else if(newDirection === "N" || newDirection === "S") {
-        newDirection = "W"
-      } 
-    } else if(command === "R") { 
-        if(newDirection === "E" || newDirection === "W") {
-          newDirection = "S"
-      } else if(newDirection === "N" || newDirection === "S") {
-        newDirection = "E"
-      }
-    } 
+    switch(command) {
+      case "M":
+        switch(newDirection) {
+          case "N":
+            newYCoordinate += 1
+            break;
+          case "E":
+            newXCoordinate += 1
+            break;
+          case "W":
+            newXCoordinate -= 1
+            break;
+          default:
+            newYCoordinate -= 1
+            break;
+        }
+        break;
+      case "L":
+        newDirection === "E" || newDirection === "W" ? newDirection = "N" : newDirection = "W"
+        break;
+      case "R": 
+        newDirection === "E" || newDirection === "W" ? newDirection = "S" : newDirection = "E"
+        break;
+    }
   }); 
   return `${newXCoordinate}:${newYCoordinate}:${newDirection}`
 }
