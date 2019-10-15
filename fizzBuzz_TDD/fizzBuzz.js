@@ -1,12 +1,7 @@
 const fizzBuzz = (num) => {
-  if(num === 5) {
+  if(num % 5 === 0) {
     return "Buzz"
-  } else if(num === 10) {
-    return "Buzz"
-  } else if(num === 15) {
-    return "Buzz"
-  }
-  if(num % 3 === 0) {
+  } else if(num % 3 === 0) {
     return "Fizz"
   }
 }

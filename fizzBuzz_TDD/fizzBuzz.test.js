@@ -27,3 +27,7 @@ test('number 10 should return "Buzz', () => {
 test('number 15 should return "Buzz', () => {
   expect(fizzBuzz(15)).toBe("Buzz")
 });
+
+test('if number is multiple of 5 return "Buzz"', () => {
+  expect(fizzBuzz(100)).toBe("Buzz")
+});
