@@ -31,3 +31,16 @@ test('number 20 should return "Buzz', () => {
 test('if number is multiple of 5 return "Buzz"', () => {
   expect(fizzBuzz(100)).toBe("Buzz")
 });
+
+test('number 15 should return "FizzBuzz"', () => {
+  expect(fizzBuzz(15)).toBe("FizzBuzz")
+});
+
+test('number 30 should return "FizzBuzz"', () => {
+  expect(fizzBuzz(30)).toBe("FizzBuzz")
+});
+
+test('number 45 should return "FizzBuzz"', () => {
+  expect(fizzBuzz(45)).toBe("FizzBuzz")
+});
+
