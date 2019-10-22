@@ -1,0 +1,14 @@
+{
+  "name": "tictactoe_tdd",
+  "version": "1.0.0",
+  "description": "more tdd practice",
+  "main": "tictactoe.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Dina Hafez",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^24.9.0"
+  }
+}
